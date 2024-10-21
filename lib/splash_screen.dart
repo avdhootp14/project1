@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/login.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -16,9 +17,8 @@ class SplashScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          // Positioned widget for the logo
           Positioned(
-            top: 312, // Adjust this value to move the logo down
+            top: 312,
             left: 47,
             right: 47,
             bottom: 400,
@@ -28,17 +28,21 @@ class SplashScreen extends StatelessWidget {
               height: 46,
             ),
           ),
-          // Button at the bottom center
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding:
-                  const EdgeInsets.only(bottom: 250), // Space from the bottom
+              padding: const EdgeInsets.only(bottom: 250),
               child: SizedBox(
                 width: 225,
                 height: 58,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFFD5700).withOpacity(0.72),
                     foregroundColor: Colors.white,
