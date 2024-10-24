@@ -59,7 +59,7 @@ class SplashScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text('Get Started'),
-                      SizedBox(width: 5),
+                      SizedBox(width: 2),
                       Icon(Icons.arrow_forward, color: Colors.white, size: 30),
                     ],
                   ),
